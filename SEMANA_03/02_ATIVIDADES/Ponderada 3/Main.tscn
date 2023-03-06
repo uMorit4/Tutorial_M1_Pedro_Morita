@@ -1,0 +1,84 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 508.0
+margin_top = 79.0
+margin_right = 927.0
+margin_bottom = 544.0
+
+[node name="Screen" type="RichTextLabel" parent="Panel"]
+margin_left = 43.0
+margin_top = 36.0
+margin_right = 373.0
+margin_bottom = 425.0
+
+[node name="Empty_List" type="Button" parent="."]
+margin_left = 76.0
+margin_top = 158.0
+margin_right = 378.0
+margin_bottom = 248.0
+
+[node name="Return_Tetx" type="Button" parent="."]
+margin_left = 76.0
+margin_top = 271.0
+margin_right = 378.0
+margin_bottom = 361.0
+
+[node name="Full_List" type="Button" parent="."]
+margin_left = 77.0
+margin_top = 376.0
+margin_right = 379.0
+margin_bottom = 466.0
+
+[node name="Value_Insert" type="Button" parent="."]
+margin_left = 78.0
+margin_top = 489.0
+margin_right = 380.0
+margin_bottom = 579.0
+
+[node name="Write_Text" type="LineEdit" parent="."]
+margin_left = 12.0
+margin_top = 29.0
+margin_right = 200.0
+margin_bottom = 145.0
+
+[node name="Text" type="Label" parent="Write_Text"]
+margin_left = 7.0
+margin_top = -20.0
+margin_right = 169.0
+margin_bottom = 20.0
+text = "Digite seu texto aqui!"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 69.0
+margin_top = 376.0
+margin_right = 386.0
+margin_bottom = 470.0
+text = "Olá amigo, tudo bem?"
+align = 1
+valign = 1
+
+[node name="Write_Values" type="LineEdit" parent="."]
+margin_left = 251.0
+margin_top = 29.0
+margin_right = 436.0
+margin_bottom = 143.0
+
+[node name="Values" type="Label" parent="Write_Values"]
+margin_left = 4.0
+margin_top = -18.0
+margin_right = 162.0
+margin_bottom = 16.0
+text = "DIgite seus valores aqui!"
+
+[connection signal="pressed" from="Empty_List" to="." method="_on_Empty_List_pressed"]
+[connection signal="pressed" from="Return_Tetx" to="." method="_on_Return_Tetx_pressed"]
+[connection signal="pressed" from="Full_List" to="." method="_on_Full_List_pressed"]
+[connection signal="pressed" from="Value_Insert" to="." method="_on_Value_Insert_pressed"]
