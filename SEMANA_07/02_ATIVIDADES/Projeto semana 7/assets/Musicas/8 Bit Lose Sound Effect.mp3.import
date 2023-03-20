@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/8 Bit Lose Sound Effect.mp3-94140b77a13d8619de20694d6d0d9ea8.mp3str"
+
+[deps]
+
+source_file="res://assets/Musicas/8 Bit Lose Sound Effect.mp3"
+dest_files=[ "res://.import/8 Bit Lose Sound Effect.mp3-94140b77a13d8619de20694d6d0d9ea8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

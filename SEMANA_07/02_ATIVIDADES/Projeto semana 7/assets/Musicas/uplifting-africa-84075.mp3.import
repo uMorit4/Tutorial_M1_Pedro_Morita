@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/uplifting-africa-84075.mp3-7b9337a82c75d89d158e42bd185675c2.mp3str"
+
+[deps]
+
+source_file="res://assets/Musicas/uplifting-africa-84075.mp3"
+dest_files=[ "res://.import/uplifting-africa-84075.mp3-7b9337a82c75d89d158e42bd185675c2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://assets/fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Sprites/Welcome.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Audio.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+outline_size = 2
+outline_color = Color( 0.921569, 0.34902, 0.0666667, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_size = 2
+outline_color = Color( 0.921569, 0.34902, 0.0666667, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 278, 475 )
+scale = Vector2( 1.136, 1.912 )
+texture = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 26.0
+margin_top = 328.0
+margin_right = 540.0
+margin_bottom = 401.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0.921569, 0.34902, 0.0666667, 1 )
+margin_left = 4.0
+margin_top = 325.0
+margin_right = 569.0
+margin_bottom = 472.0
+custom_fonts/font = SubResource( 1 )
+text = "Extinction
+"
+align = 1
+valign = 1
+
+[node name="Start" type="Button" parent="."]
+margin_left = 151.0
+margin_top = 465.0
+margin_right = 431.0
+margin_bottom = 555.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 152.0
+margin_top = 594.0
+margin_right = 428.0
+margin_bottom = 682.0
+custom_fonts/font = SubResource( 3 )
+custom_styles/hover = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "Quit"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

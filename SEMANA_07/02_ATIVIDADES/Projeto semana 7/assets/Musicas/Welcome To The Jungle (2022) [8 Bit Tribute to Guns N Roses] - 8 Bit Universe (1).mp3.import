@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Welcome To The Jungle (2022) [8 Bit Tribute to Guns N Roses] - 8 Bit Universe (1).mp3-a0a38e13f5cd63594f55521660a18f1e.mp3str"
+
+[deps]
+
+source_file="res://assets/Musicas/Welcome To The Jungle (2022) [8 Bit Tribute to Guns N Roses] - 8 Bit Universe (1).mp3"
+dest_files=[ "res://.import/Welcome To The Jungle (2022) [8 Bit Tribute to Guns N Roses] - 8 Bit Universe (1).mp3-a0a38e13f5cd63594f55521660a18f1e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

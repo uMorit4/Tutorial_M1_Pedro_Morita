@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/monster-roar-6985 (mp3cut.net).mp3-8e2877cae80d8ca736710c98a5bffc9d.mp3str"
+
+[deps]
+
+source_file="res://assets/Musicas/monster-roar-6985 (mp3cut.net).mp3"
+dest_files=[ "res://.import/monster-roar-6985 (mp3cut.net).mp3-8e2877cae80d8ca736710c98a5bffc9d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

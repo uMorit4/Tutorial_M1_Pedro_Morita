@@ -1,0 +1,163 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scripts/Tutorial.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/joystix_monospace_font.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+uniform float height = 20.0;
+uniform float speed = 10.0;
+uniform float frequency = 5.0;
+void vertex() {
+	VERTEX.y += sin((frequency * UV.x) + (speed * TIME));
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+shader_param/height = 20.0
+shader_param/speed = 10.0
+shader_param/frequency = 5.0
+
+[sub_resource type="DynamicFont" id=1]
+size = 35
+outline_size = 2
+outline_color = Color( 0.941176, 0.517647, 0.137255, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 23
+outline_size = 1
+outline_color = Color( 0.941176, 0.517647, 0.137255, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 23
+outline_size = 1
+outline_color = Color( 0.941176, 0.517647, 0.137255, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 25
+outline_size = 1
+outline_color = Color( 0.941176, 0.517647, 0.137255, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Shader" id=7]
+code = "shader_type canvas_item;
+
+uniform float height = 20.0;
+uniform float speed = 10.0;
+uniform float frequency = 5.0;
+void vertex() {
+	VERTEX.y += sin((frequency * UV.x) + (speed * TIME));
+}"
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = SubResource( 7 )
+shader_param/height = 20.0
+shader_param/speed = 10.0
+shader_param/frequency = 5.0
+
+[sub_resource type="DynamicFont" id=9]
+size = 35
+outline_size = 2
+outline_color = Color( 0.941176, 0.517647, 0.137255, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="DynamicFont" id=12]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 561.0
+margin_bottom = 940.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+material = SubResource( 6 )
+margin_left = 33.0
+margin_top = 78.0
+margin_right = 512.0
+margin_bottom = 726.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "Seus filhotes correm perigo, você deve ajudar!
+
+Controles:
+"
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+modulate = Color( 0.905882, 0.52549, 0.12549, 1 )
+position = Vector2( 56, 447 )
+polygon = PoolVector2Array( 11, -37, 44, -15, 45, -61 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+modulate = Color( 0.905882, 0.52549, 0.12549, 1 )
+position = Vector2( 27, 540 )
+polygon = PoolVector2Array( 80, -40, 44, -15, 45, -61 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 129.0
+margin_top = 390.0
+margin_right = 363.0
+margin_bottom = 438.0
+custom_fonts/font = SubResource( 2 )
+text = "Seta para a esquerda"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 131.0
+margin_top = 471.0
+margin_right = 484.0
+margin_bottom = 519.0
+custom_fonts/font = SubResource( 3 )
+text = "Seta para a direita"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 284.0
+margin_top = 577.0
+margin_right = 514.0
+margin_bottom = 625.0
+custom_fonts/font = SubResource( 4 )
+text = "Atacar"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="."]
+material = SubResource( 8 )
+margin_left = 94.0
+margin_top = 709.0
+margin_right = 476.0
+margin_bottom = 800.0
+custom_fonts/font = SubResource( 9 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+text = "Play"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 65.0
+margin_top = 579.0
+margin_right = 287.0
+margin_bottom = 619.0
+color = Color( 0.905882, 0.52549, 0.12549, 1 )
+
+[node name="Label" type="Label" parent="ColorRect2"]
+margin_right = 221.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 12 )
+text = "Barra de espaço"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
